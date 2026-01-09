@@ -48,6 +48,13 @@ class DiceDropperApp {
                 const sides = parseInt(btn.dataset.sides);
                 this.addDie(sides);
             });
+            
+            // Right-click to reduce dice count
+            btn.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                const sides = parseInt(btn.dataset.sides);
+                this.removeDie(sides);
+            });
         });
         
         // Roll button
@@ -75,6 +82,14 @@ class DiceDropperApp {
         const diceType = `d${sides}`;
         this.selectedDice[diceType]++;
         this.updateDiceCounts();
+    }
+    
+    removeDie(sides) {
+        const diceType = `d${sides}`;
+        if (this.selectedDice[diceType] > 0) {
+            this.selectedDice[diceType]--;
+            this.updateDiceCounts();
+        }
     }
     
     updateDiceCounts() {
