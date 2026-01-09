@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiceDropper - Virtual Dice Roller</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎲 DiceDropper</h1>
+            <p>Drop your dice and watch them roll!</p>
+        </header>
+
+        <div class="controls-panel">
+            <div class="dice-selector">
+                <h2>Select Your Dice</h2>
+                <div class="dice-buttons">
+                    <button class="dice-btn" data-sides="4">
+                        <span class="dice-icon">D4</span>
+                        <span class="dice-count" id="count-d4">0</span>
+                    </button>
+                    <button class="dice-btn" data-sides="6">
+                        <span class="dice-icon">D6</span>
+                        <span class="dice-count" id="count-d6">0</span>
+                    </button>
+                    <button class="dice-btn" data-sides="8">
+                        <span class="dice-icon">D8</span>
+                        <span class="dice-count" id="count-d8">0</span>
+                    </button>
+                    <button class="dice-btn" data-sides="10">
+                        <span class="dice-icon">D10</span>
+                        <span class="dice-count" id="count-d10">0</span>
+                    </button>
+                    <button class="dice-btn" data-sides="12">
+                        <span class="dice-icon">D12</span>
+                        <span class="dice-count" id="count-d12">0</span>
+                    </button>
+                    <button class="dice-btn" data-sides="20">
+                        <span class="dice-icon">D20</span>
+                        <span class="dice-count" id="count-d20">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button id="roll-btn" class="primary-btn">🎲 Roll Dice</button>
+                <button id="clear-btn" class="secondary-btn">Clear All</button>
+                <button id="save-jpeg-btn" class="save-btn">💾 Save as JPEG</button>
+                <button id="save-pdf-btn" class="save-btn">📄 Save as PDF</button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="diceCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

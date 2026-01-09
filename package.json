@@ -1,0 +1,22 @@
+{
+  "name": "dicedropper",
+  "version": "1.0.0",
+  "description": "Interactive dice rolling web application with physics-based dice drop mechanics",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o",
+    "start": "npx http-server -p 3000"
+  },
+  "keywords": [
+    "dice",
+    "roller",
+    "tabletop",
+    "rpg",
+    "game",
+    "physics"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
